@@ -1,13 +1,17 @@
+@import url("https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/plus-jakarta-display.min.css");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body{
-    background-color: black;
+body {
+  background-color: black;
 }
 .nav {
+  font-family: "Plus Jakarta Display", sans-serif;
+  font-weight: bold;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -24,22 +28,28 @@ body{
   border: none;
 }
 
-.searchbar{
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    margin-right: 50px;
+.searchbar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-right: 50px;
+}
+input {
+  outline: none;
+  color: white;
+  padding-left: 45px;
+  font-size: 16px;
+  font-family: "Plus Jakarta Display", sans-serif;
+}
+input::placeholder {
+  color: rgb(255, 255, 255, 0.45);
 }
 
-input::placeholder{
-    color: rgb(255, 255, 255, 0.45);
-    padding-left: 45px;
-    
-}
-
-.home, .destinations, .contactus{
-    color: white;
-    margin-right: 50px;
+.home,
+.destinations,
+.contactus {
+  color: white;
+  margin-right: 50px;
 }
 /* 
 .bgimg{
@@ -47,14 +57,35 @@ input::placeholder{
     left: 615px;
 } */
 
-.content{
-    color: white;
-    display: flex;
-    justify-content: space-between;
+.content {
+  color: white;
+  display: flex;
+  justify-content: space-between;
 }
 
-.description{
-    margin-left: 25px;
+.description {
+  margin-left: 25px;
+  margin-top: 80px;
+  font-size: xx-large;
+}
+
+h4{
+    color: white;
+    font-size: 30px;
+    margin-left: 100px;
+    margin-top: 50px;
+    font-family: "Plus Jakarta Display", sans-serif;
+}
+
+.container {
+    position: absolute;
+    left: 15%;
+    display: flex;
     margin-top: 80px;
-    font-size: xx-large;
+    width: 1000px;
+    height: 376px;
+    background-color: #1c2527;
+    border-radius: 15px;
+    align-items: center;
+    justify-content: space-around;
 }
