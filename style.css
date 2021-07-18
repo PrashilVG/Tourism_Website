@@ -77,15 +77,15 @@ h4{
     font-family: "Plus Jakarta Display", sans-serif;
 }
 
-.container {
-    position: absolute;
-    left: 15%;
-    display: flex;
-    margin-top: 80px;
-    width: 1000px;
-    height: 376px;
-    background-color: #1c2527;
-    border-radius: 15px;
-    align-items: center;
-    justify-content: space-around;
+
+.filters {
+   
+  display: flex;
+  margin-top: 80px;
+ 
+  
+  border-radius: 15px;
+  align-items: center;
+  justify-content: space-evenly;
 }
+
