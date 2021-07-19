@@ -64,6 +64,7 @@
         position: absolute;
         left: -10px;
       }
+      
     </style>
   </head>
 
@@ -86,7 +87,7 @@
       <div class="destinations">Destinations</div>
       <div class="contactus">Contact Us</div>
     </div>
-    <div class="content">
+    <div class="quote">
       <img
         src="./images and svg/Quote.svg"
         style="position: absolute; top: 28%"
@@ -227,67 +228,41 @@
       </h6>
     </div>
 
-    <div class="filters">
-      <button
-        style=" 
-          width: 120px;
-          cursor: pointer;
-          background-color: black;
-          padding: 10px;
-          margin: 5px;
-          border: 4px solid black;
-          outline: white 2px solid;
-          text-align: center;
-          color: white;
-        "
+    <div id="filters">
+      <button class="btn active" 
+        
+        
       >
         Hill Station
       </button>
-      <button
-        style="
-          width: 120px;
-          cursor: pointer;
-          background-color: black;
-          padding: 10px;
-          margin: 5px;
-          border: 4px solid black;
-          outline: white 2px solid;
-          text-align: center;
-          color: white;
-        "
+      <button class="btn"
+        
+          
       >
         Beaches
       </button>
-      <button
-        style="
-          width: 120px;
-          cursor: pointer;
-          background-color: black;
-          padding: 10px;
-          margin: 5px;
-          border: 4px solid black;
-          outline: white 2px solid;
-          text-align: center;
-          color: white;
-        "
+      <button class="btn"
+        
       >
         Temples
       </button>
-      <button
-        style="
-          width: 120px;
-          cursor: pointer;
-          background-color: black;
-          padding: 10px;
-          margin: 5px;
-          border: 4px solid black;
-          outline: white 2px solid;
-          text-align: center;
-          color: white;
-        "
+      <button class="btn"
+        
       >
         WaterFalls
       </button>
+    </div>
+    <div class="hillstations">
+      <div class="pagesinfo">
+        <div class="content">
+            <h1>Manali</h1>
+            <div class="info" style="font-size: 24px;">
+                Manali is a high-altitude Himalayan resort town in India’s northern Himachal Pradesh state. It has a reputation as a backpacking center and honeymoon destination. Set on the Beas River, it’s a gateway for skiing in the Solang Valley and trekking in Parvati Valley. It's also a jumping-off point for paragliding, rafting and mountaineering in the Pir Panjal mountains, home to 4,000m-high Rohtang Pass.
+            </div>
+        </div>
+        <div class="imgcontainer"><img src="./images and svg/manali2.jpg" style="height: 400px; width:700px;"></div>
+        
+      </div> 
     </div>
 
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
@@ -309,6 +284,17 @@
           prevEl: ".swiper-button-prev",
         },
       });
+      var header = document.getElementById("filters");
+      var btns = header.getElementsByClassName("btn");
+      for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function () {
+          var current = document.getElementsByClassName("active");
+          current[0].className = current[0].className.replace(" active", "");
+          this.className += " active";
+        });
+      }
+    
+
     </script>
   </body>
 </html>

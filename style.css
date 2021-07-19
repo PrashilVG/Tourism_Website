@@ -53,7 +53,7 @@ input::placeholder {
 }
 
 
-.content {
+.quote  {
   color: white;
   display: flex;
   justify-content: space-between;
@@ -90,7 +90,7 @@ h6{
   margin-top: 50px;
 }
 
-.filters {
+#filters {
   display: flex;
   margin-top: 60px;
   border-radius: 15px;
@@ -101,5 +101,69 @@ h6{
 .category{
   display: flex;
   justify-content: center;
+  
+}
+
+.hillstations{
+  color: white;
+  margin-top: 140px;
+  display: flex;
+  justify-content: space-evenly;
+
+}
+
+
+
+.btn {
+  width: 120px;
+          cursor: pointer;
+          padding: 10px;
+          margin: 5px;
+          border: 4px solid black;
+          outline: white 2px solid;
+          text-align: center;
+          background-color: black;
+          color:white;
+}
+
+/* Style the active class, and buttons on mouse-over */
+.active
+ {
+  background-color: white;
+  color: black;
+}
+
+.pagesinfo {
+  height: 400px;
+  width: 100%;
+}
+
+.content {
+  height: 400px;
+  width: 40%;
+  display: inline-block;
+  margin: 40px;
+  /* display: flex; */
+  /* justify-content: center; */
+}
+
+.content h1 {
+  font-size: 60px;
+  letter-spacing: 1.5px;
+
+}
+
+.content .info {
+  text-align: justify;
+  font-size: 27px;
+  margin-top: 10px;
+}
+
+.imgcontainer {
+  /* display: inline-block; */
+  display: inline;
+  
+  height: 40px;
+  width: 80px;
   
 }
