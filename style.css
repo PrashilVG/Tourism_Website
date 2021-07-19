@@ -51,23 +51,15 @@ input::placeholder {
   color: white;
   margin-right: 50px;
 }
-/* 
-.bgimg{
-    position: absolute;
-    left: 615px;
-} */
+
 
 .content {
   color: white;
   display: flex;
   justify-content: space-between;
+  width: 100%;
 }
 
-.description {
-  margin-left: 25px;
-  margin-top: 80px;
-  font-size: xx-large;
-}
 
 h4{
     color: white;
@@ -77,15 +69,37 @@ h4{
     font-family: "Plus Jakarta Display", sans-serif;
 }
 
+h3{
+  color: white;
+  font-size: 30px;
+left: 50%;
+  margin-top: 50px;
+  font-family: "Plus Jakarta Display", sans-serif;
+}
+
+h6{
+  
+  font-size: 24px;
+
+ margin-top: 7px;
+  font-family: "Plus Jakarta Display", sans-serif;
+}
+.categories{
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
 
 .filters {
-   
   display: flex;
-  margin-top: 80px;
- 
-  
+  margin-top: 60px;
   border-radius: 15px;
   align-items: center;
   justify-content: space-evenly;
 }
 
+.category{
+  display: flex;
+  justify-content: center;
+  
+}

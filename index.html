@@ -1,157 +1,314 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fontesk.com/" />
+    <link
+      rel="stylesheet"
+      href="https://fontesk.com/plus-jakarta-sans-typeface/"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <title>Document</title>
+    <style>
+      .container {
+        display: flex;
+        margin-top: 75px;
+        width: 1000px;
+        height: 390px;
+        background-color: #1c2527;
+        border-radius: 15px;
+        align-items: center;
+        justify-content: space-around;
+      }
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css" />
-  <link rel="preconnect" href="https://fontesk.com/" />
-  <link rel="stylesheet" href="https://fontesk.com/plus-jakarta-sans-typeface/" />
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-  <title>Document</title>
-  <style>
-    /* html,
-    body {
-        position: relative;
-        height: 100%;
-    }
-    body {
-        background: #eee;
-        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-        font-size: 14px;
-        color: #000;
-        margin: 0;
-        padding: 0;
-    } */
+      .swiper-container {
+        height: 400px;
+      }
 
-    .container {
+      .swiper-wrapper {
+        align-items: center;
+      }
 
-      display: flex;
-      margin-top: 75px;
-      width: 1000px;
-      height: 390px;
-      background-color: #1c2527;
-      border-radius: 15px;
-      align-items: center;
-      justify-content: space-around;
-    }
+      .swiper-slide {
+        width: 280px;
+        height: 300px;
+        border-radius: 15px;
+      }
 
-    .swiper-container {
-      height: 400px;
-    }
+      .swiper-slide img {
+        width: 280px;
+        height: 300px;
+        border-radius: 10px;
+      }
 
-    .swiper-wrapper {
-      align-items: center;
-    }
+      .swiper-slide-active {
+        transform: scale(1.15);
+        transition: 0.4s;
+      }
 
-    .swiper-slide {
-      width: 280px;
-      height: 300px;
-      border-radius: 15px;
-    }
+      .swiper-button-next {
+        position: absolute;
+        height: 80px;
+        width: 80px;
+        left: 93%;
+      }
+      .swiper-button-prev {
+        height: 80px;
+        width: 80px;
+        position: absolute;
+        left: -10px;
+      }
+    </style>
+  </head>
 
-    .swiper-slide img {
-      width: 280px;
-      height: 300px;
-      border-radius: 10px;
-    }
+  <body>
+    <div class="nav">
+      <img src="./images and svg/Logo.svg" />
 
-    .swiper-slide-active {
-      transform: scale(1.15);
-      transition: .4s;
-    }
-
-    
-
-    .swiper-button-next
-    {
-      position: absolute;
-      height: 80px;
-      width: 80px;
-      left: 93%
-      
-    }
-    .swiper-button-prev
-    {
-      height: 80px;
-      width: 80px;
-      position: absolute;
-      left:-10px;
-    }
-    
-  </style>
-</head>
-
-<body>
-  <div class="nav">
-    <img src="./images and svg/Logo.svg" />
-
-    <div class="searchbar">
-      <img style="position: absolute; padding-left: 10px" src="./images and svg/Search_Icon.svg" />
-      <input class="search_bar" type="text" placeholder="Explore your favourite places..." />
+      <div class="searchbar">
+        <img
+          style="position: absolute; padding-left: 10px"
+          src="./images and svg/Search_Icon.svg"
+        />
+        <input
+          class="search_bar"
+          type="text"
+          placeholder="Explore your favourite places..."
+        />
+      </div>
+      <div class="home">Home</div>
+      <div class="destinations">Destinations</div>
+      <div class="contactus">Contact Us</div>
     </div>
-    <div class="home">Home</div>
-    <div class="destinations">Destinations</div>
-    <div class="contactus">Contact Us</div>
-  </div>
-  <div class="content">
-    <div class="description">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua.
+    <div class="content">
+      <img
+        src="./images and svg/Quote.svg"
+        style="position: absolute; top: 28%"
+      />
+      <img
+        src="./images and svg/background_image.svg"
+        class="bgimg"
+        style="position: relative; left: 24.9%"
+      />
     </div>
-    <img src="./images and svg/background_image.svg" class="bgimg" />
-  </div>
-  <div class="mostvisited">
-    <h4>
-      <ul>
-        <li>Most Visited Places</li>
-      </ul>
-    </h4>
-    <div style="display: flex; justify-content: center;">
-      <div class="container">
-        <div class="swiper-container mySwiper">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide"><img src="./images and svg/kedarnath.jpg" alt=""></div>
-            <div class="swiper-slide"><img src="./images and svg/marine-drive-1591342644.jpg" alt=""></div>
-            <div class="swiper-slide"><img src="https://miro.medium.com/max/975/1*9anWc70m14bSkrTCEMX4TA.jpeg"
-                alt="the golden city"></div>
-            <div class="swiper-slide"><img src="./images and svg/Ladakh.jpg" alt="ladakh"></div>
-            <div class="swiper-slide"><img
-                src="https://images.adsttc.com/media/images/5bd9/b552/f197/cc45/e900/00d6/medium_jpg/43914221_363966157680449_595145553531016098_n.jpg?1540994380"
-                alt="statue of unity"></div>
-
-
+    <div class="mostvisited">
+      <h4>
+        <ul>
+          <li>Most Visited Places</li>
+        </ul>
+      </h4>
+      <div style="display: flex; justify-content: center">
+        <div class="container">
+          <div class="swiper-container mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="./images and svg/kedarnath.jpg" alt="" />
+                <div
+                  style="
+                    position: absolute;
+                    top: 90%;
+                    left: 27%;
+                    transform: translate(-50%, -50%);
+                    font-family: Plus Jakarta Sans;
+                    font-size: 24px;
+                    font-weight: bold;
+                    color: white;
+                  "
+                >
+                  Kedarnath
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="./images and svg/marine-drive-1591342644.jpg"
+                  alt=""
+                />
+                <div
+                  style="
+                    position: absolute;
+                    top: 90%;
+                    left: 31%;
+                    transform: translate(-50%, -50%);
+                    font-family: Plus Jakarta Sans;
+                    font-size: 24px;
+                    font-weight: bold;
+                    color: white;
+                  "
+                >
+                  Marine Drive
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="https://miro.medium.com/max/975/1*9anWc70m14bSkrTCEMX4TA.jpeg"
+                  alt="the golden city"
+                />
+                <div
+                  style="
+                    position: absolute;
+                    top: 88%;
+                    left: 37%;
+                    transform: translate(-50%, -50%);
+                    font-family: Plus Jakarta Sans;
+                    font-size: 24px;
+                    font-weight: bold;
+                    color: white;
+                  "
+                >
+                  The Golden City
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <img src="./images and svg/Ladakh.jpg" alt="ladakh" />
+                <div
+                  style="
+                    position: absolute;
+                    top: 90%;
+                    left: 22%;
+                    transform: translate(-50%, -50%);
+                    font-family: Plus Jakarta Sans;
+                    font-size: 24px;
+                    font-weight: bold;
+                    color: white;
+                  "
+                >
+                  Ladakh
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="https://images.adsttc.com/media/images/5bd9/b552/f197/cc45/e900/00d6/medium_jpg/43914221_363966157680449_595145553531016098_n.jpg?1540994380"
+                  alt="statue of unity"
+                />
+                <div
+                  style="
+                    position: absolute;
+                    top: 88%;
+                    left: 37%;
+                    transform: translate(-50%, -50%);
+                    font-family: Plus Jakarta Sans;
+                    font-size: 24px;
+                    font-weight: bold;
+                    color: white;
+                  "
+                >
+                  Statue Of Unity
+                </div>
+              </div>
+            </div>
+            <img
+              src="./images and svg/Right_arrow.svg"
+              class="swiper-button-next"
+              alt="right"
+            />
+            <img
+              src="./images and svg/Left_arrow.svg"
+              class="swiper-button-prev"
+              alt="left"
+            />
+            <div class="swiper-pagination"></div>
           </div>
-          <img src="./images and svg/Right_arrow.svg" class="swiper-button-next" alt="right" />
-          <img src="./images and svg/Left_arrow.svg" class="swiper-button-prev" alt="left" />
-          <div class="swiper-pagination"></div>
         </div>
       </div>
     </div>
 
-  </div>
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <div class="categories">
+      <h3>Popular Travelling Places</h3>
+    </div>
+    <div class="category">
+      <h6 style="color: #3e3e3e; text-align: center">
+        Places we recommend when you’re travelling in India
+      </h6>
+    </div>
 
-  <!-- Initialize Swiper -->
-  <script>
-    var swiper = new Swiper(".mySwiper", {
-      grabCursor: true,
-      centeredSlides: true,
-      slidesPerView: "auto",
-      spaceBetween: 50,
-      loop: true,
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
+    <div class="filters">
+      <button
+        style=" 
+          width: 120px;
+          cursor: pointer;
+          background-color: black;
+          padding: 10px;
+          margin: 5px;
+          border: 4px solid black;
+          outline: white 2px solid;
+          text-align: center;
+          color: white;
+        "
+      >
+        Hill Station
+      </button>
+      <button
+        style="
+          width: 120px;
+          cursor: pointer;
+          background-color: black;
+          padding: 10px;
+          margin: 5px;
+          border: 4px solid black;
+          outline: white 2px solid;
+          text-align: center;
+          color: white;
+        "
+      >
+        Beaches
+      </button>
+      <button
+        style="
+          width: 120px;
+          cursor: pointer;
+          background-color: black;
+          padding: 10px;
+          margin: 5px;
+          border: 4px solid black;
+          outline: white 2px solid;
+          text-align: center;
+          color: white;
+        "
+      >
+        Temples
+      </button>
+      <button
+        style="
+          width: 120px;
+          cursor: pointer;
+          background-color: black;
+          padding: 10px;
+          margin: 5px;
+          border: 4px solid black;
+          outline: white 2px solid;
+          text-align: center;
+          color: white;
+        "
+      >
+        WaterFalls
+      </button>
+    </div>
 
-    });
-  </script>
-</body>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: "auto",
+        spaceBetween: 50,
+        loop: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+  </body>
 </html>
